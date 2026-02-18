@@ -1,0 +1,38 @@
+{
+  "this": {
+    "doc_1": 1
+  },
+  "domain": {
+    "doc_1": 1
+  },
+  "use": {
+    "doc_1": 2
+  },
+  "documentation": {
+    "doc_1": 1
+  },
+  "examples": {
+    "doc_1": 1
+  },
+  "without": {
+    "doc_1": 1
+  },
+  "needing": {
+    "doc_1": 1
+  },
+  "permission": {
+    "doc_1": 1
+  },
+  "avoid": {
+    "doc_1": 1
+  },
+  "operations": {
+    "doc_1": 1
+  },
+  "learn": {
+    "doc_1": 1
+  },
+  "more": {
+    "doc_1": 1
+  }
+}
