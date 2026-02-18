@@ -3,6 +3,21 @@
     "docId": "doc_1",
     "url": "https://example.com",
     "title": "Example Domain",
-    "rawText": "This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more"
+    "tokens": [
+      "this",
+      "domain",
+      "use",
+      "documentation",
+      "examples",
+      "without",
+      "needing",
+      "permission",
+      "avoid",
+      "use",
+      "operations",
+      "learn",
+      "more"
+    ],
+    "length": 13
   }
 ]
