@@ -14,9 +14,9 @@ for(let i = 0; i < rawPages.length; i++){
     $("header").remove();
     const title = $("title").text().trim();
     let text = "";
-    $("p").each((_,el)=>{
-        text += $(el).text().trim() + " ";
-    })
+$("p, h1, h2, h3, h4, article, li").each((_,el)=>{
+    text += $(el).text().trim() + " ";
+})
     documents.push({
         docId: `doc_${i + 1}`,
         // title: title,
