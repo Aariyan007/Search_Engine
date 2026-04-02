@@ -11,6 +11,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function crawlSite(seed){
     const baseUrl = `https://${seed.domain}`;
+    const baseHost = new URL(baseUrl).hostname;
     const queue = [baseUrl];
 
     while(queue.length > 0 && visited.size < seed.maxPages){
@@ -31,13 +32,13 @@ async function crawlSite(seed){
 
                 let fullUrl;
                 try {
-                    fullUrl = new URL(href, baseUrl).href;
+                    fullUrl = new URL(href, url);
                 } catch(e) {
                     return;
                 }
 
-                if(fullUrl.includes(seed.domain)){
-                    link.push(fullUrl);
+                if(fullUrl.hostname === baseHost){
+                    link.push(fullUrl.href);
                 }
             });
 
@@ -49,10 +50,10 @@ async function crawlSite(seed){
                 }
             }
 
-            await delay(1000);
-
         } catch(err){
             console.log("Failed to fetch", url, err.message);
+        } finally {
+            await delay(1000);
         }
     }
 }
