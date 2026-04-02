@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "node setup.js",
+    "start": "node crawler/crawler.js && node processor/extractText.js && node processor/tokenize.js && node index/buildIndex.js && node rank/pagerank.js",
+    "search": "node search/search.js"
   },
   "repository": {
     "type": "git",
@@ -14,10 +16,6 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Aariyan007/Search_Engine/issues"
-  },
-  "homepage": "https://github.com/Aariyan007/Search_Engine#readme",
   "dependencies": {
     "axios": "^1.13.5",
     "cheerio": "^1.2.0"
